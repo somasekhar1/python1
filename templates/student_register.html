@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/studentdetails/" method="post">
+    {% csrf_token %}
+<table>
+    <tr>
+        <th>Student registration</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="studentname" required name="s1">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" placeholder="contact" required name="s2">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="radio" value="Male" name="s3">Male<br>
+            <input type="radio" value="Female" name="s3">Female
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="student username" required name="s4">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="password" placeholder="password" required name="s5">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="email" placeholder="Email" required name="s6">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="register">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ res }}
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
